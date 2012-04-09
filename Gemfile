@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'haml'
+gem 'sass'
+gem 'compass'
+gem 'compass-susy-plugin'
+gem 'bootstrap-sass'
+# gem 'mongo'
+gem 'koala'

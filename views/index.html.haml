@@ -1,0 +1,62 @@
+!!! 5
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/pip.css"}
+    %script{:type => "text/javascript", :src => "http://use.typekit.com/syu1onf.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %title
+      Programmers in Padua
+  %body
+    = haml :"_header.html"
+  
+    %section{:role => "main"}
+          
+      %article.program
+        %header
+          %h1 Venerd&igrave; 30 Marzo, ore 19 &middot; Collegio Mazza &middot; via Savonarola 176, Padova
+        %ul
+          - @talks.each do |talk|
+            %li
+              %header
+                %img{:src => talk.img}
+                %h2= talk.title
+                %h4= talk.speaker
+              %p= talk.description
+              
+                  
+
+      %section
+        %article.map           
+          %header
+            %h2 
+              Dove siamo
+          %img.map{:src => "http://maps.googleapis.com/maps/api/staticmap?center=via+Savonarola+176,Padova,Italy&zoom=15&size=350x180&maptype=roadmap&markers=color:0x664ca2%7C45.411618,11.868068&sensor=false"}        
+        
+        %article.attending 
+          %header
+            %h2 
+              Sono dei nostri
+              &middot;
+              %a.btn{:href=>"https://www.facebook.com/events/#{@fb_event_id}/"} JOIN US            
+
+          - @attending.each do |person|
+            %img{:src => person[:src], :title => person[:name]}
+           
+         
+        %article.about
+          %header
+            %h2 Chi siamo, cosa facciamo
+          %p Siamo un club di persone che per lavoro e passione si occupano di programmazione, nuove tecnologie e startup.
+          %p Ci incontriamo una volta al mese in un ambiente aperto e informale, dove sono i partecipanti a proporsi per i talk. Dopo l'evento, birra e pizza tutti assieme.
+          %p 
+            Siamo su&nbsp;
+            %a{:href=>"https://www.facebook.com/groups/programmersinpadua/"}> Facebook
+            ,
+            %a{:href=>"http://twitter.com/fruktarbo"} Twitter
+            e qualche volta scriviamo sul
+            %a{:href=>"http://www.fruktarbo.com/blog/programmers-in-padua/"} Blog 
+            
+    = haml :"_footer.html"
+    

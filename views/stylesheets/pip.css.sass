@@ -1,0 +1,200 @@
+@import compass
+@import susy
+@import bootstrap/variables
+@import bootstrap/mixins
+@import bootstrap/type
+@import bootstrap/code
+@import bootstrap/forms
+@import bootstrap/tables
+@import bootstrap/layouts
+@import bootstrap/navs
+@import bootstrap/navbar
+@import bootstrap/breadcrumbs
+@import bootstrap/sprites
+@import bootstrap/tooltip
+@import bootstrap/buttons
+@import bootstrap/wells
+
+$col-width: 100 / $total-cols
+$side-gutter-width: 10 * $gutter-width
+
+body 
+  +background(linear-gradient(top, #aaa #ddd))
+  background:
+    color: #ddd
+    repeat: no-repeat
+  height: 100%
+  +clearfix
+  font:
+    family: $baseFontFamily
+    size: $baseFontSize      
+  +container
+  
+  >nav
+    +full      
+          
+    ul
+      @extend .nav
+      @extend .nav-pills
+
+      li
+        
+        a, a:hover
+          color: $textColor
+        
+        a:hover
+          background: #ddc099
+      
+        &.active
+        
+          a, a:hover
+            background: #f49c25
+            
+                        
+            i
+              @extend .icon-white
+      
+  a
+    color: $linkColor
+    text-decoration: none
+  
+  a:hover
+    color: $linkColorHover
+    text-decoration: underline
+
+header[role=banner]
+  +full
+  padding: 9px 0
+  max-width: 100%
+  overflow: hidden
+  
+  h1
+    font:
+      weight: normal
+      size: 90px
+      family: "league-gothic-1","league-gothic-2",sans-serif
+    line-height: 90px
+    +text-shadow(white -1px 1px 0)
+    margin: 0
+    
+    span
+      +nowrap
+    
+    span.in
+      font-family: "tangerine-1","tangerine-2",sans-serif
+     
+    img
+      vertical-align: text-top
+      height: 90px
+        
+        
+section[role=main]
+  +clearfix
+  +full
+
+  article
+    
+    header
+      margin-bottom: 9px
+
+    
+  >article
+    +container
+    @extend .well
+    +box-sizing(border-box)
+    
+    >header
+      text-transform: uppercase
+      margin-bottom: 54px
+      
+      h1
+        font:
+          family: "league-gothic-1","league-gothic-2",sans-serif
+          size: 3em
+        +text-shadow(#f49c25 -1px 1px 0)
+
+        
+    ul
+      +no-bullets
+      margin: 0
+        
+      li
+        margin-bottom: 36px
+        +clearfix
+                  
+        header
+          margin-bottom: 18px
+        
+        img
+          float: left
+          margin: 0 5px 4px 0
+    
+        p
+          +columns(11,12)
+          +suffix(1,12)
+        
+
+          
+  >section
+    +container
+    margin-top: 36px
+        
+    article
+      margin-top: 36px
+        
+      &.about
+    
+      &.info
+        
+      &.map
+          
+        p
+          
+    img.map
+      max-width: 100%
+      padding: 4px 5px 5px
+      background: white
+      +border-radius(4px)      
+      +box-sizing(border-box)
+
+body > footer
+  margin: 18px 0 
+  border-top: 1px solid white
+  padding-top: 8px
+  +full
+
+  p
+    font-size: .7em
+    
+    
+@media screen and (min-width: 768px)
+
+  header[role=banner]
+  
+    h1
+      
+      span
+        white-space: normal
+
+  section[role=main]
+    
+    >article
+      
+      ul
+        
+        li
+          +columns(4,12)
+          margin-bottom: 0
+
+          
+          &:last-child
+            +omega(12)     
+    
+    >section
+   
+      article
+        +columns(4,12)  
+        margin-top: 0
+      
+        &:last-child
+          +omega(12)      
