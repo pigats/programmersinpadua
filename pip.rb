@@ -46,7 +46,7 @@ get '/' do
     
     Talk.new({:title => 'Regexp', :speaker => 'Filippo De Pretto', :description => 'Pulisci, filtra, carica, valida i dati e sostituisci le occorrenze necessarie. In una riga. Questo e molto altro, con le potentissime espressioni regolari. Inventate nel 1950, ora presenti e utilizzate ovunque.', :fb => 'filnik'}),
     
-    Talk.new({:title => 'Cyberpediatria', :speaker => 'Roberto Mancin', :description => "Mind Reader & Robotherapy in TIPED, Pediatric neuroinformatics, Augmentative Telecommunication, Child's Brain Computer Interface - idee per stage di cyberpediatria innovativi", :fb => 'roberto.mancin' }),
+    Talk.new({:title => 'Cyberpediatria', :speaker => 'Roberto Mancin', :description => "Pediatric neuroinformatics & Child's Brain Computer Interface, Mind Reader for Robotherapy & Augmentative Telecommunication in Padua's Pediatric Intensive Care Unit (PICU): idee per stage di cyberpediatria innovativi.", :fb => 'roberto.mancin' }),
     
     Talk.new({:title => 'Introduzione alla UX', :speaker => 'Andrea Collet', :description => "User Experience - Facciamo un po' di luce su esperienza e interazione con il prodotto digitale e di ciò che è essenziale conoscere per semplificare la vita all'utente.", :fb => '100003786820159' }),
     
