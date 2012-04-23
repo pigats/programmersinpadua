@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'compass'
 require 'sinatra'
 require 'haml'
@@ -28,7 +30,7 @@ end
 
 get '/' do 
   
-  @fb_event_id = "235571656541303"
+  @fb_event_id = "403725222984565"
   @attending = []
   
   if ENV['API_KEY'] and ENV['APP_SECRET'] 
@@ -40,9 +42,16 @@ get '/' do
   @talks = [
     Talk.new({:title => "Intro allo sviluppo iOS", :speaker => "Giacomo Saccardo", :description => "Una overview che cerca di toccare tutti i passaggi principali per sviluppare app: codice, ciclo di vita dell'app, rapporti apple-developers&hellip;", :fb => 'saccardogiacomo'}),
     
-    Talk.new({title: 'Thinking Sphinx', speaker: 'Antonio Passamani', description: 'Si parler&agrave; di Sphinx e della ricerca (di testo e posizioni) in generale. Ci sono scaffolds per costruire il proprio sito in Ruby on Rails con funzione ricerca partendo da zero, con presentazione di un caso concreto di ricerca geo.', :fb => 'antonio.passamani'}),
+    Talk.new({:title => 'Thinking Sphinx', :speaker => 'Antonio Passamani', :description => 'Si parler&agrave; di Sphinx e della ricerca (di testo e posizioni) in generale. Ci sono scaffolds per costruire il proprio sito in Ruby on Rails con funzione ricerca partendo da zero, con presentazione di un caso concreto di ricerca geo.', :fb => 'antonio.passamani'}),
     
-    Talk.new({title: 'Regexp', speaker: 'Filippo De Pretto', description: 'Pulisci, filtra, carica, valida i dati e sostituisci le occorrenze necessarie. In una riga. Questo e molto altro, con le potentissime espressioni regolari. Inventate nel 1950, ora presenti e utilizzate ovunque.', :fb => 'filnik'})]
+    Talk.new({:title => 'Regexp', :speaker => 'Filippo De Pretto', :description => 'Pulisci, filtra, carica, valida i dati e sostituisci le occorrenze necessarie. In una riga. Questo e molto altro, con le potentissime espressioni regolari. Inventate nel 1950, ora presenti e utilizzate ovunque.', :fb => 'filnik'}),
+    
+    Talk.new({:title => 'Cyberpediatria', :speaker => 'Roberto Mancin', :description => "Mind Reader & Robotherapy in TIPED, Pediatric neuroinformatics, Augmentative Telecommunication, Child's Brain Computer Interface - idee per stage di cyberpediatria innovativi", :fb => 'roberto.mancin' }),
+    
+    Talk.new({:title => 'Introduzione alla UX', :speaker => 'Andrea Collet', :description => "User Experience - Facciamo un po' di luce su esperienza e interazione con il prodotto digitale e di ciò che è essenziale conoscere per semplificare la vita all'utente.", :fb => '100003786820159' }),
+    
+    Talk.new({:title => "Lean Startup all'Italiana", :speaker => 'Nicola Junior Vitto', :description => "La Lean Startup e il Customer Development hanno cambiato il modo in cui realizzare nuove aziende in USA e stiamo iniziando ad apprezzarne i vantaggi anche in Europa e in Italia. Ma il nostro ecosistema di startup e venture capital è molto diverso rispetto a quello oltreoceano...come applicare quindi le metodologie lean nel nostro Paese?", :fb => 'njvitto' })    
+    ].last(3)
 
   haml :"index.html"
 end
