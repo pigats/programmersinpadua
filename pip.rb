@@ -31,7 +31,7 @@ end
 get '/' do 
   
   @date = "Venerd&igrave; 25 Maggio, ore 19:30"
-  @fb_event_id = "403725222984565"
+  @fb_event_id = "390252084354616"
   @attending = []
   
   if ENV['API_KEY'] and ENV['APP_SECRET'] 
