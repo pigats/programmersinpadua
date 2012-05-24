@@ -55,8 +55,10 @@ get '/' do
     
     Talk.new({:title => "ISF e OpenHospital", :speaker => 'Alessandro Domanico', :description => "OpenHospital è un software free e opensource per la gestione e raccolta dati di piccoli ospedali rurali nei Paesi in Via di Sviluppo (PVS). Nato nel 2006 dalla collaborazione tra Informatici Senza Frontiere (ISF) e Amici di Angal (Uganda) è ora utilizzato in diversi paesi in Africa. Frameworks: Java Swing/AWT, MySQL, JasperReports.", :fb => 'alessandro.domanico1' }),
     
+    Talk.new({:title => "Introduzione a Python", :speaker => 'Filippo De Pretto', :description => "Una cosa accomuna Star Wars, Google e la NASA: Python! Un linguaggio semplice, flessibile, estendibile e potente. Vedremo perché, quando usarlo e perché per molti è diventato il linguaggio definitivo.", :fb => 'filnik' }),
+    
     Talk.new({:title => "Web dev con Django", :speaker => 'Flavio Marcato', :description => "Django è un framework pensato per il web. Come strumento è progettato per l'essere intuitivo, pulito e potente; il tutto grazie al supporto di Python. Tali obiettivi sono perseguiti da una filofia orientata alla massima automazione e al DRY principle, implementati entrambi da uno stile di progettazione a tre livelli: Modelli, Viste e Template. Infine, applicazioni web scritte in Django garantiscono al cliente un prodotto elegante e in tempi brevi. ", :fb => 'WingRunner' })    
-    ].last(2)
+    ].last(3)
 
   haml :"index.html"
 end
