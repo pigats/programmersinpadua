@@ -30,8 +30,8 @@ end
 
 get '/' do 
   
-  @date = "Venerd&igrave; 25 Maggio, ore 19:30"
-  @fb_event_id = "390252084354616"
+  @date = "Venerd&igrave; 29 Giugno, ore 19:00"
+  @fb_event_id = "386199931443394"
   @attending = []
   
   if ENV['API_KEY'] and ENV['APP_SECRET'] 
@@ -57,8 +57,13 @@ get '/' do
     
     Talk.new({:title => "Introduzione a Python", :speaker => 'Filippo De Pretto', :description => "Una cosa accomuna Star Wars, Google e la NASA: Python! Un linguaggio semplice, flessibile, estendibile e potente. Vedremo perché, quando usarlo e perché per molti è diventato il linguaggio definitivo.", :fb => 'filnik' }),
     
-    Talk.new({:title => "Web dev con Django", :speaker => 'Flavio Marcato', :description => "Django è un framework pensato per il web. Come strumento è progettato per l'essere intuitivo, pulito e potente; il tutto grazie al supporto di Python. Tali obiettivi sono perseguiti da una filofia orientata alla massima automazione e al DRY principle, implementati entrambi da uno stile di progettazione a tre livelli: Modelli, Viste e Template. Infine, applicazioni web scritte in Django garantiscono al cliente un prodotto elegante e in tempi brevi. ", :fb => 'WingRunner' })    
-    ].last(3)
+    Talk.new({:title => "Web dev con Django", :speaker => 'Flavio Marcato', :description => "Django è un framework pensato per il web. Come strumento è progettato per l'essere intuitivo, pulito e potente; il tutto grazie al supporto di Python. Tali obiettivi sono perseguiti da una filofia orientata alla massima automazione e al DRY principle, implementati entrambi da uno stile di progettazione a tre livelli: Modelli, Viste e Template. Infine, applicazioni web scritte in Django garantiscono al cliente un prodotto elegante e in tempi brevi. ", :fb => 'WingRunner' }),
+    
+    Talk.new({:title => "It Shoudn't work that way", :speaker => 'Hoang Chau Huynh', :description => "Il concetto di \"affordance\" è sicuramente uno dei cardini dell'user experience e dell'usabilità. Nonostante sia un argomento ipertrattato e spesso anche abusato dagli addetti al settore, è sicuramente un piccolo tassello di conoscenza utile e versatile per ogni professionista che si occupi di interfacce e utenti. E' un argomento di cui vale la pena di trattare e di cui voglio fornire la mia particolare chiave di lettura perchè capace di innescare comprensione e immaginazione ad ogni livello di progettazione. ", :fb => 'hoangchau.huynh' }),        
+    
+    Talk.new({:title => "Programmers in Amsterdam", :speaker => 'Francesco Mattia', :description => "Dopo un anno passato ad Amsterdam come sviluppatore mobile, Francesco Mattia condivide con il PIP la sua esperienza. Tutto quello che vorreste sapere sulle community e sul mondo delle startup ad Amsterdam. ", :fb => 'fr4ncis' }),
+    
+    ].last(2)
 
   haml :"index.html"
 end
