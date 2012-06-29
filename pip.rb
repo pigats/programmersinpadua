@@ -63,7 +63,9 @@ get '/' do
     
     Talk.new({:title => "Programmers in Amsterdam", :speaker => 'Francesco Mattia', :description => "Dopo un anno passato ad Amsterdam come sviluppatore mobile, Francesco Mattia condivide con il PIP la sua esperienza. Tutto quello che vorreste sapere sulle community e sul mondo delle startup ad Amsterdam. ", :fb => 'fr4ncis' }),
     
-    ].last(2)
+    Talk.new({:title => "from JavaScript to CoffeeScript", :speaker => 'Stefano Ceschi Berrini', :description => "In questo talk verr&agrave; fatta, dopo aver introdotto CoffeeScript, una coding session 'live' nella quale si trasformer&agrave; del codice JavaScript in CoffeeScript e di quest'ultimo se ne illustreranno i vantaggi.", :fb => 'stefanoceschiberrini' }),
+    
+    ].last(3)
 
   haml :"index.html"
 end
