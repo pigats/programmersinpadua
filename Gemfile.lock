@@ -3,6 +3,9 @@ GEM
   specs:
     addressable (2.2.7)
     bootstrap-sass (2.0.1)
+    bson (1.6.1)
+    bson_ext (1.6.1)
+      bson (~> 1.6.1)
     chunky_png (1.2.5)
     compass (0.12.1)
       chunky_png (~> 1.2)
@@ -19,6 +22,8 @@ GEM
     koala (1.4.0)
       faraday (~> 0.7.0)
       multi_json (~> 1.0)
+    mongo (1.6.1)
+      bson (~> 1.6.1)
     multi_json (1.2.0)
     multipart-post (1.1.5)
     rack (1.4.1)
@@ -36,9 +41,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bson_ext
   compass
   compass-susy-plugin
   haml
   koala
+  mongo
   sass
   sinatra
