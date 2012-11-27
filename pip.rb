@@ -17,7 +17,7 @@ class Meetup
     else
       mongo = Mongo::Connection.new().db('pip')   
     end
-    mongo.collection('talks').find.sort(:_id,:desc).limit(3).each do |t|
+    mongo.collection('talks').find.sort(:_id,:desc).limit(2).each do |t|
       @talks << Talk.new(t)
     end 
 
@@ -59,7 +59,7 @@ end
 
 get '/' do 
   
-  meetup = Meetup.new({date: "Venerd&igrave; 29 Giugno, ore 19:00", fb_event_id: "386199931443394"})
+  meetup = Meetup.new({date: "Venerd&igrave; 30 Novembre, ore 19:00", fb_event_id: "224888420976911"})
   
   @date = meetup.date 
   @fb_event_id = meetup.fb_event_id
